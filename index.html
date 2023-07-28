@@ -1,0 +1,78 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+       <!-- Google Fonts -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+       
+       <!-- Font Awesome -->
+    </head>
+    <body>
+        <!-- Site Header -->
+        <header>
+            <img src="images/header-background.png" id="header-image">
+            <h1>Nyoknyok's Diner</h1>
+            <h2>The best fastfood Chain in Town</h2>
+        </header>
+        <section>
+            <!-- Site Menu -->
+            <div id="product-list">
+                <!-- Inserting the Menu here from JS -->
+            </div>
+            <!-- Checkout Details Division -->
+            <div class="checkout-details-div">
+                <h3 class="checkout-title">Your order</h3>
+                
+                <!-- List of Ordered Products -->
+                <div id="ordered-products">
+                    <!-- List of Ordered Products will be displayed Here -->
+                </div>
+                
+                <hr class="checkout-hr">
+                
+                <!-- Display Total Price -->
+                <div class="total-price-div">
+                    <p class="total-price">Total Price:</p>
+                    <p class="display-total-price" id="display-total-price">$0</p>
+                </div>
+                
+                <!-- Checkout Button -->
+                <button id="checkout-button">Complete Order</button>
+            </div>
+        </section>
+        
+        <!-- Modal for Payment -->
+        <div id="payment-div">
+            <p class="payment-title">ENTER CARD DETAILS</p>
+            
+            <form>
+                <input type="text" class="input-text" id="input-name" placeholder="Enter your name" required>
+                <input type="text" class="input-text" id="input-credit-card" placeholder="Enter card number" required>
+                <input type="number" class="input-text" id="input-cvv" placeholder="Enter CVV" max="9999" required>
+                
+                <div class="button-div">
+                    <button id="payment-button" type="button">Pay</button>
+                    <button id="cancel-button" type="button">Cancel</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Modal if no order -->
+        <div id="no-order-div">
+            <p class="no-order-title">PLEASE SELECT YOUR ORDER!</p>
+            <button id="close-no-order-button" type="button">Close</button>
+        </div>
+        
+        <!-- Modal for confirmation -->
+        <div id="order-confirmed-div">
+            <p class="order-confirmed-title">HI <span id="render-name"></span>! THANK YOU FOR YOUR ORDER!</p>
+            <button id="close-confirmed-button" type="button">Close</button>
+        </div>
+        
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>
+
